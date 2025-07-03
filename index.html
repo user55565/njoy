@@ -10,6 +10,16 @@
         <div class="header-content">
             <h1>nJoy24</h1>
             <p class="subtitle">Empowering Your Digital Experience</p>
+            <div class="lang-switch-wrapper">
+                <label for="lang-switch" class="lang-label">
+                    <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c1.657 0 3.156.672 4.242 1.758A5.978 5.978 0 0 1 20 12c0 1.657-.672 3.156-1.758 4.242A5.978 5.978 0 0 1 12 20a5.978 5.978 0 0 1-4.242-1.758A5.978 5.978 0 0 1 4 12c0-1.657.672-3.156 1.758-4.242A5.978 5.978 0 0 1 12 4zm0 2a4 4 0 0 0-4 4h2a2 2 0 1 1 4 0h2a4 4 0 0 0-4-4zm0 12a4 4 0 0 0 4-4h-2a2 2 0 1 1-4 0H8a4 4 0 0 0 4 4z"/></svg>
+                    <span>Language:</span>
+                </label>
+                <select id="lang-switch" class="lang-switch">
+                    <option value="en">English</option>
+                    <option value="sk">Slovenčina</option>
+                </select>
+            </div>
         </div>
     </header>
 
@@ -22,7 +32,7 @@
     <main>
         <section id="about" class="tab-content active">
             <h2>About Us</h2>
-            <p>We are a forward-thinking startup.</p>
+            <p>At the forefront of technological advancement, our company leverages cutting-edge platforms and scalable architectures to deliver seamless integration and unparalleled efficiency. By harnessing next-generation frameworks and agile methodologies, we empower enterprises to unlock new dimensions of productivity and innovation.</p>
         </section>
 
         <section id="services" class="tab-content">
@@ -36,10 +46,23 @@
         </section>
 
         <section id="contact" class="tab-content">
-            <h2>Contact</h2>
-            <p>Have questions or want to work with us?</p>
-            <a class="contact-btn" href="mailto:example@startup.com">Email Us</a>
-        </section>
+    <h2>Contact</h2>
+    <p>Have questions or want to work with us?</p>
+    <ul class="contact-list">
+        <li>
+            <strong>Email:</strong>
+            <a href="mailto:example@gmail.com">example@gmail.com</a>
+        </li>
+        <li>
+            <strong>Email 2:</strong>
+            <a href="mailto:example2@gmail.com">example2@gmail.com</a>
+        </li>
+        <li>
+            <strong>Phone:</strong>
+            <a href="tel:+421275896322">+421 275 896 322</a>
+        </li>
+    </ul>
+</section>
     </main>
 
     <footer>
@@ -47,17 +70,6 @@
             <p>&copy; 2025 nJoy24 &mdash; All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        const tabs = document.querySelectorAll('.tab');
-        const contents = document.querySelectorAll('.tab-content');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                contents.forEach(c => c.classList.remove('active'));
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.tab).classList.add('active');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

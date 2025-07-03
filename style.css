@@ -49,6 +49,54 @@ header h1 {
     color: #d1fae5;
 }
 
+/* Language Switcher Styling */
+.lang-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    background: #e6f9ef;
+    padding: 7px 16px 7px 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(25,85,53,0.06);
+    width: fit-content;
+}
+
+.lang-label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+    gap: 6px;
+    margin-right: 2px;
+}
+
+.lang-icon {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--primary);
+    margin-right: 2px;
+}
+
+.lang-switch {
+    border: 1.5px solid var(--primary-dark);
+    border-radius: 6px;
+    padding: 5px 18px 5px 10px;
+    font-size: 1rem;
+    background: #fff;
+    color: var(--primary-dark);
+    font-weight: 500;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    cursor: pointer;
+}
+
+.lang-switch:focus {
+    border: 1.5px solid var(--primary);
+    box-shadow: 0 0 0 2px #baf5d6;
+}
+
 .tabs {
     display: flex;
     justify-content: center;
@@ -123,22 +171,42 @@ li {
     font-size: 1.1rem;
 }
 
-.contact-btn {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 12px 32px;
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(25,85,53,0.08);
-    transition: background 0.2s;
+/* Contact List Styling */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
 }
-.contact-btn:hover {
-    background: var(--primary-dark);
+
+.contact-list li {
+    margin-bottom: 14px;
+    font-size: 1.12rem;
+    background: #f1fdf7;
+    border-left: 4px solid var(--primary);
+    padding: 12px 18px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(25,85,53,0.04);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-list strong {
+    min-width: 60px;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.contact-list a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 6px;
+    word-break: break-all;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -156,4 +224,3 @@ footer {
     margin: 0 auto;
     font-size: 1rem;
     letter-spacing: 1px;
-}

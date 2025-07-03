@@ -17,7 +17,7 @@ const translations = {
         servicesTab: "What We Offer",
         contactTab: "Contact",
         aboutTitle: "About Us",
-        aboutText: "At the forefront of technological advancement, our company leverages cutting-edge platforms and scalable architectures to deliver seamless integration and unparalleled efficiency. By harnessing next-generation frameworks and agile methodologies, we empower enterprises to unlock new dimensions of productivity and innovation.",
+        aboutText: "At the forefront of technological advancement, our company leverages cutting-edge platforms and scalable architectures to deliver seamless integration and unparalleled efficiency. By harnessing next-generation frameworks and agile methodologies, we empower enterprises to unlock new dimensions of productivity and innovation.<br><br>Harnessing the power of artificial intelligence and machine learning, our solutions enable predictive analytics and intelligent automation, redefining industry standards. We prioritize robust cybersecurity measures and compliance frameworks to safeguard critical assets in an increasingly interconnected landscape.",
         servicesTitle: "What We Offer",
         servicesList: [
             "Custom Web Development",
@@ -28,14 +28,15 @@ const translations = {
         contactTitle: "Contact",
         contactText: "Have questions or want to work with us?",
         contactBtn: "Email Us",
-        subtitle: "Empowering Your Digital Experience"
+        subtitle: "Empowering Your Digital Experience",
+        language: "Language:"
     },
     sk: {
         aboutTab: "O nás",
         servicesTab: "Čo ponúkame",
         contactTab: "Kontakt",
         aboutTitle: "O nás",
-        aboutText: "Na čele technologického pokroku naša spoločnosť využíva najmodernejšie platformy a škálovateľné architektúry na zabezpečenie bezproblémovej integrácie a bezkonkurenčnej efektivity. Vďaka využívaniu najnovších frameworkov a agilných metodológií umožňujeme podnikom odomknúť nové dimenzie produktivity a inovácií.",
+        aboutText: "Naša spoločnosť je na čele technologického pokroku a využíva najmodernejšie platformy a škálovateľné architektúry, aby poskytovala bezproblémovú integráciu a bezkonkurenčnú efektívnosť. Využívaním rámcov novej generácie a agilných metodík pomáhame podnikom odomknúť nové dimenzie produktivity a inovácie.<br><br>Naše riešenia využívajú silu umelej inteligencie a strojového učenia a umožňujú prediktívnu analýzu a inteligentnú automatizáciu, čím redefinujú štandardy v odvetví. Uprednostňujeme robustné opatrenia v oblasti kybernetickej bezpečnosti a rámce dodržiavania predpisov, aby sme chránili kritické aktíva v čoraz viac prepojenej krajine.",
         servicesTitle: "Čo ponúkame",
         servicesList: [
             "Vývoj webových aplikácií na mieru",
@@ -46,7 +47,8 @@ const translations = {
         contactTitle: "Kontakt",
         contactText: "Máte otázky alebo s nami chcete spolupracovať?",
         contactBtn: "Napíšte nám",
-        subtitle: "Posilňujeme vaše digitálne zážitky"
+        subtitle: "Posilňujeme vaše digitálne zážitky",
+        language: "Jazyk:"
     }
 };
 
@@ -55,6 +57,8 @@ if (langSwitch) {
     langSwitch.addEventListener('change', function () {
         const lang = this.value;
         const t = translations[lang];
+        // Language label
+        document.querySelector('.lang-label-text').textContent = t.language;
 
         // Slogan/subtitle
         document.querySelector('.subtitle').textContent = t.subtitle;
@@ -66,7 +70,7 @@ if (langSwitch) {
 
         // About section
         document.querySelector('#about h2').textContent = t.aboutTitle;
-        document.querySelector('#about p').textContent = t.aboutText;
+        document.querySelector('#about p').innerHTML = t.aboutText;
 
         // Services section
         document.querySelector('#services h2').textContent = t.servicesTitle;

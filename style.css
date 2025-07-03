@@ -1,11 +1,11 @@
 :root {
     --primary: #195;
     --primary-dark: #144d36;
-    --background: #f8fafc;
+    --background: #ebebeb;
     --header-bg: #222;
     --header-text: #fff;
     --tab-bg: #fff;
-    --tab-inactive: #e5e7eb;
+    --tab-inactive: #dce1eb;
     --tab-active: var(--primary);
     --tab-active-text: #fff;
     --border: #e5e7eb;
@@ -39,6 +39,7 @@ header {
 }
 
 header h1 {
+    
     font-family: 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif;
     font-size: 3.6rem;
     margin: 0;

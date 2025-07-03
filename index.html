@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nJoy24</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>nJoy24</h1>
+            <p class="subtitle">Empowering Your Digital Experience</p>
+        </div>
+    </header>
+
+    <nav class="tabs">
+        <div class="tab active" data-tab="about">About Us</div>
+        <div class="tab" data-tab="services">What We Offer</div>
+        <div class="tab" data-tab="contact">Contact</div>
+    </nav>
+
+    <main>
+        <section id="about" class="tab-content active">
+            <h2>About Us</h2>
+            <p>We are a forward-thinking startup dedicated to delivering innovative digital solutions that help your business thrive in a connected world.</p>
+        </section>
+
+        <section id="services" class="tab-content">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Custom Web Development</li>
+                <li>Mobile App Solutions</li>
+                <li>Cloud Integration</li>
+                <li>Consulting &amp; Support</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <h2>Contact</h2>
+            <p>Have questions or want to work with us?</p>
+            <a class="contact-btn" href="mailto:example@startup.com">Email Us</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 nJoy24 &mdash; All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

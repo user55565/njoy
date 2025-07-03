@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     background: var(--background);
     color: #222;
     margin: 0;
@@ -22,6 +22,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.7;
+    font-size: 1.08rem;
 }
 
 header {
@@ -37,9 +39,21 @@ header {
 }
 
 header h1 {
-    font-size: 2.8rem;
+    font-family: 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 3.6rem;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow:
+        0 4px 24px rgba(0,0,0,0.25),
+        0 1px 0 #144d36;
+    border-bottom: none;
+    display: block;
+    padding-bottom: 0;
+    background: none;
+    line-height: 1.1;
+    margin-bottom: 10px;
 }
 
 .subtitle {
@@ -47,6 +61,7 @@ header h1 {
     font-weight: 400;
     margin-top: 10px;
     color: #d1fae5;
+    letter-spacing: 0.5px;
 }
 
 /* Language Switcher Styling */
@@ -130,6 +145,11 @@ header h1 {
     box-shadow: 0 4px 12px rgba(25,85,53,0.08);
 }
 
+.tab:hover:not(.active) {
+    background: #d1fae5;
+    color: var(--primary-dark);
+}
+
 main {
     flex: 1;
     max-width: 700px;
@@ -158,6 +178,13 @@ h2 {
     color: var(--primary-dark);
     margin-top: 0;
     font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+section {
+    margin-bottom: 36px;
 }
 
 ul {
@@ -168,7 +195,8 @@ ul {
 
 li {
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 1.08rem;
+    color: #2a2a2a;
 }
 
 /* Contact List Styling */
@@ -224,3 +252,41 @@ footer {
     margin: 0 auto;
     font-size: 1rem;
     letter-spacing: 1px;
+}
+
+#about img {
+    display: block;
+    margin: 32px auto 0 auto;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(25,85,53,0.10);
+    border: 2px solid #e6f9ef;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#about img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(25,85,53,0.18);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    main, .header-content, .footer-content {
+        padding: 16px !important;
+        max-width: 100% !important;
+    }
+    .tab {
+        padding: 12px 10px;
+        font-size: 1rem;
+    }
+    .lang-switch-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    #about img {
+        max-width: 98%;
+    }
+}

@@ -1,22 +1,25 @@
 :root {
-    --primary: #195;
-    --primary-dark: #144d36;
-    --background: #ebebeb;
-    --header-bg: #222;
+    --primary: #14b8a6;
+    --primary-dark: #116e68;
+    --background: #e0f2f1;
+    --header-bg: #116e68;
     --header-text: #fff;
-    --tab-bg: #fff;
-    --tab-inactive: #dce1eb;
+    --tab-bg: #f7faf9;
+    --tab-inactive: #b2dfdb;
     --tab-active: var(--primary);
     --tab-active-text: #fff;
-    --border: #e5e7eb;
-    --footer-bg: #222;
-    --footer-text: #fff;
+    --border: #b2dfdb;
+    --footer-bg: #116e68;
+    --footer-text: #e0f2f1;
+    --text-main: #184a45;
+    --text-light: #fff;
+    --card-bg: #f7faf9;
 }
 
 body {
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     background: var(--background);
-    color: #222;
+    color: var(--text-main);
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -39,16 +42,15 @@ header {
 }
 
 header h1 {
-    
     font-family: 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif;
     font-size: 3.6rem;
     margin: 0;
     letter-spacing: 3px;
     font-weight: 900;
-    color: #fff;
+    color: var(--header-text);
     text-shadow:
-        0 4px 24px rgba(0,0,0,0.25),
-        0 1px 0 #144d36;
+        0 4px 24px rgba(0,0,0,0.18),
+        0 1px 0 var(--primary-dark);
     border-bottom: none;
     display: block;
     padding-bottom: 0;
@@ -61,7 +63,7 @@ header h1 {
     font-size: 1.3rem;
     font-weight: 400;
     margin-top: 10px;
-    color: #d1fae5;
+    color: #b2dfdb;
     letter-spacing: 0.5px;
 }
 
@@ -71,10 +73,10 @@ header h1 {
     align-items: center;
     gap: 10px;
     margin-top: 22px;
-    background: #e6f9ef;
+    background: #b2dfdb;
     padding: 7px 16px 7px 12px;
     border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(25,85,53,0.06);
+    box-shadow: 0 1px 4px rgba(17,110,104,0.08);
     width: fit-content;
 }
 
@@ -110,7 +112,7 @@ header h1 {
 
 .lang-switch:focus {
     border: 1.5px solid var(--primary);
-    box-shadow: 0 0 0 2px #baf5d6;
+    box-shadow: 0 0 0 2px var(--primary);
 }
 
 .tabs {
@@ -134,7 +136,7 @@ header h1 {
     margin: 0 4px;
     font-size: 1.1rem;
     font-weight: 500;
-    color: #222;
+    color: var(--primary-dark);
     transition: background 0.2s, color 0.2s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
     outline: none;
@@ -143,11 +145,11 @@ header h1 {
 .tab.active {
     background: var(--tab-active);
     color: var(--tab-active-text);
-    box-shadow: 0 4px 12px rgba(25,85,53,0.08);
+    box-shadow: 0 4px 12px rgba(17,110,104,0.10);
 }
 
 .tab:hover:not(.active) {
-    background: #d1fae5;
+    background: #26c6da;
     color: var(--primary-dark);
 }
 
@@ -155,10 +157,11 @@ main {
     flex: 1;
     max-width: 700px;
     margin: 40px auto 0 auto;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.06);
     padding: 40px 32px 32px 32px;
+    color: var(--text-main);
 }
 
 .tab-content {
@@ -197,7 +200,7 @@ ul {
 li {
     margin-bottom: 10px;
     font-size: 1.08rem;
-    color: #2a2a2a;
+    color: var(--text-main);
 }
 
 /* Contact List Styling */
@@ -210,11 +213,11 @@ li {
 .contact-list li {
     margin-bottom: 14px;
     font-size: 1.12rem;
-    background: #f1fdf7;
+    background: #e0f2f1;
     border-left: 4px solid var(--primary);
     padding: 12px 18px;
     border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(25,85,53,0.04);
+    box-shadow: 0 1px 4px rgba(17,110,104,0.06);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -263,8 +266,8 @@ footer {
     max-width: 700px;
     margin: 0 auto 32px auto;
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(25,85,53,0.10);
-    background: #000;
+    box-shadow: 0 4px 24px rgba(17,110,104,0.13);
+    background: #116e68;
     backface-visibility: hidden;
 }
 
@@ -287,8 +290,8 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(25,85,53,0.10);
-    border: 2px solid #e6f9ef;
+    box-shadow: 0 4px 24px rgba(17,110,104,0.13);
+    border: 2px solid #b2dfdb;
     transition: transform 0.2s, box-shadow 0.2s;
     backface-visibility: hidden;
     image-rendering: auto;
@@ -297,7 +300,7 @@ footer {
 
 #about img:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 32px rgba(25,85,53,0.18);
+    box-shadow: 0 8px 32px rgba(17,110,104,0.18);
 }
 
 /* Responsive Design */

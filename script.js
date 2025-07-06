@@ -47,7 +47,6 @@ const translations = {
         contactTitle: "Kontakt",
         contactText: "Máte otázky alebo s nami chcete spolupracovať?",
         contactBtn: "Napíšte nám",
-        subtitle: "Posilňujeme vaše digitálne zážitky",
         language: "Jazyk:"
     }
 };
@@ -60,8 +59,8 @@ if (langSwitch) {
         // Language label
         document.querySelector('.lang-label-text').textContent = t.language;
 
-        // Slogan/subtitle
-        document.querySelector('.subtitle').textContent = t.subtitle;
+        // Slogan/subtitle (always English)
+        document.querySelector('.subtitle').textContent = "Engage. Optimize. Grow.";
 
         // Tabs
         document.querySelector('[data-tab="about"]').textContent = t.aboutTab;

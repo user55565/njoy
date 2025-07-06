@@ -255,6 +255,31 @@ footer {
     letter-spacing: 1px;
 }
 
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(25,85,53,0.10);
+    background: #000;
+    backface-visibility: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+    backface-visibility: hidden;
+    image-rendering: auto;
+}
+
 #about img {
     display: block;
     margin: 32px auto 0 auto;
@@ -265,6 +290,9 @@ footer {
     box-shadow: 0 4px 24px rgba(25,85,53,0.10);
     border: 2px solid #e6f9ef;
     transition: transform 0.2s, box-shadow 0.2s;
+    backface-visibility: hidden;
+    image-rendering: auto;
+    overflow: hidden;
 }
 
 #about img:hover {

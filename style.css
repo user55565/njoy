@@ -27,6 +27,9 @@ body {
     flex-direction: column;
     line-height: 1.7;
     font-size: 1.08rem;
+    background-image:
+        repeating-linear-gradient(135deg, #b2dfdb 0px, #b2dfdb 2px, transparent 2px, transparent 32px),
+        repeating-linear-gradient(45deg, #bbdefb 0px, #bbdefb 2px, transparent 2px, transparent 32px);
 }
 
 header {
@@ -160,8 +163,30 @@ main {
     background: var(--card-bg);
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-    padding: 40px 32px 32px 32px;
+    padding: 48px 36px 36px 36px;
     color: var(--text-main);
+    font-size: 1.13rem;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+main p {
+    margin-bottom: 28px;
+    color: #184a45;
+    font-size: 1.13rem;
+    line-height: 1.85;
+    letter-spacing: 0.01em;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+main h2 {
+    font-family: 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
 }
 
 .tab-content {
@@ -291,8 +316,8 @@ footer {
 }
 
 .site-logo {
-    max-width: 170px;
-    width: 100%;
+    width: 320px;
+    max-width: 100%;
     height: auto;
     margin: 0 0 8px 0;
     filter: drop-shadow(0 4px 24px rgba(13,71,161,0.10));

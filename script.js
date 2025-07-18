@@ -1,4 +1,3 @@
-// Tab switching logic
 const tabs = document.querySelectorAll('.tab');
 const contents = document.querySelectorAll('.tab-content');
 tabs.forEach(tab => {
@@ -10,14 +9,13 @@ tabs.forEach(tab => {
     });
 });
 
-// Example: Language switching logic (expand as needed)
 const translations = {
     en: {
         aboutTab: "About Us",
         servicesTab: "What We Offer",
         contactTab: "Contact",
-        aboutTitle: "About Us",
-        aboutText: "At the forefront of technological advancement, our company leverages cutting-edge platforms and scalable architectures to deliver seamless integration and unparalleled efficiency. By harnessing next-generation frameworks and agile methodologies, we empower enterprises to unlock new dimensions of productivity and innovation.<br><br>Harnessing the power of artificial intelligence and machine learning, our solutions enable predictive analytics and intelligent automation, redefining industry standards. We prioritize robust cybersecurity measures and compliance frameworks to safeguard critical assets in an increasingly interconnected landscape.",
+        aboutTitle: "The future of sales is here",
+        aboutText: "",
         servicesTitle: "What We Offer",
         servicesList: [
             "Custom Web Development",
@@ -35,8 +33,8 @@ const translations = {
         aboutTab: "O nás",
         servicesTab: "Čo ponúkame",
         contactTab: "Kontakt",
-        aboutTitle: "O nás",
-        aboutText: "Naša spoločnosť je na čele technologického pokroku a využíva najmodernejšie platformy a škálovateľné architektúry, aby poskytovala bezproblémovú integráciu a bezkonkurenčnú efektívnosť. Využívaním rámcov novej generácie a agilných metodík pomáhame podnikom odomknúť nové dimenzie produktivity a inovácie.<br><br>Naše riešenia využívajú silu umelej inteligencie a strojového učenia a umožňujú prediktívnu analýzu a inteligentnú automatizáciu, čím redefinujú štandardy v odvetví. Uprednostňujeme robustné opatrenia v oblasti kybernetickej bezpečnosti a rámce dodržiavania predpisov, aby sme chránili kritické aktíva v čoraz viac prepojenej krajine.",
+        aboutTitle: "Budúcnosť predaja je tu",
+        aboutText: "",
         servicesTitle: "Čo ponúkame",
         servicesList: [
             "Vývoj webových aplikácií na mieru",

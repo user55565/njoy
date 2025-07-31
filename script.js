@@ -15,7 +15,13 @@ const translations = {
         servicesTab: "What We Offer",
         contactTab: "Contact",
         aboutTitle: "The future of sales is here",
-        aboutText: "",
+        aboutLead: "<strong>With a new generation of smart vending machines.</strong>",
+        aboutFeatures: `Discover a vending machine that does more than just sell.<br>
+Thanks to advanced technology, you will increase sales, reduce costs and gain a new channel for targeted digital advertising. Your customers get a fast, intuitive and modern way to shop – anytime, anywhere.`,
+        aboutQuality: "<em>Designed with an emphasis on quality, efficiency and sustainability.</em>",
+        aboutQuality2: `These automated devices were developed based on the real needs of customers.<br>
+The result? A reliable solution that meets the highest technical and environmental standards while looking elegant and professional in any environment.`,
+        aboutSummary: "<strong>Get more out of your space...</strong>",
         servicesTitle: "What We Offer",
         servicesList: [
             "Custom Web Development",
@@ -27,14 +33,21 @@ const translations = {
         contactText: "Have questions or want to work with us?",
         contactBtn: "Email Us",
         subtitle: "Empowering Your Digital Experience",
-        language: "Language:"
+        language: "Language:",
+        contactPhone: "Phone"
     },
     sk: {
         aboutTab: "O nás",
         servicesTab: "Čo ponúkame",
         contactTab: "Kontakt",
         aboutTitle: "Budúcnosť predaja je tu",
-        aboutText: "",
+        aboutLead: "<strong>S inteligentnými automatmi novej generácie</strong>",
+        aboutFeatures: `Objavte automat, ktorý robí viac než len predáva.<br>
+Vďaka pokročilej technológii zvýšite tržby, znížite náklady a získate nový kanál na cielenú digitálnu reklamu. Vaši zákazníci získajú rýchly, intuitívny a moderný spôsob nakupovania – kedykoľvek a kdekoľvek.`,
+        aboutQuality: "<em>Navrhnuté s dôrazom na kvalitu, efektivitu a udržateľnosť</em>",
+        aboutQuality2: `Tieto automatizované zariadenia boli vyvinuté na základe reálnych potrieb zákazníkov.<br>
+Výsledok? Spoľahlivé riešenie, ktoré spĺňa najvyššie technické aj ekologické štandardy a zároveň pôsobí elegantne a profesionálne v každom prostredí.`,
+        aboutSummary: "<strong>Získajte viac zo svojho priestoru...</strong>",
         servicesTitle: "Čo ponúkame",
         servicesList: [
             "Vývoj webových aplikácií na mieru",
@@ -45,7 +58,8 @@ const translations = {
         contactTitle: "Kontakt",
         contactText: "Máte otázky alebo s nami chcete spolupracovať?",
         contactBtn: "Napíšte nám",
-        language: "Jazyk:"
+        language: "Jazyk:",
+        contactPhone: "Telefón"
     }
 };
 
@@ -67,7 +81,11 @@ if (langSwitch) {
 
         // About section
         document.querySelector('#about h2').textContent = t.aboutTitle;
-        document.querySelector('#about p').innerHTML = t.aboutText;
+        document.getElementById('about-lead').innerHTML = t.aboutLead;
+        document.getElementById('about-features').innerHTML = t.aboutFeatures;
+        document.getElementById('about-quality').innerHTML = t.aboutQuality;
+        document.getElementById('about-quality2').innerHTML = t.aboutQuality2;
+        document.getElementById('about-summary').innerHTML = t.aboutSummary;
 
         // Services section
         document.querySelector('#services h2').textContent = t.servicesTitle;
@@ -82,6 +100,11 @@ if (langSwitch) {
         // Contact section
         document.querySelector('#contact h2').textContent = t.contactTitle;
         document.querySelector('#contact p').textContent = t.contactText;
-        document.querySelector('#contact .contact-btn').textContent = t.contactBtn;
+        // If you have a contact button, update its text:
+        const contactBtn = document.querySelector('#contact .contact-btn');
+        if (contactBtn) contactBtn.textContent = t.contactBtn;
+        // Translate phone label
+        const phoneLabel = document.querySelector('#contact strong[phone-label]');
+        if (phoneLabel) phoneLabel.textContent = t.contactPhone + ":";
     });
 }

@@ -334,7 +334,8 @@ footer {
     text-align: left;
 }
 
-#about img {
+#about img,
+#services img {
     display: block;
     margin: 32px auto 0 auto;
     max-width: 350px;
@@ -349,7 +350,8 @@ footer {
     overflow: hidden;
 }
 
-#about img:hover {
+#about img:hover,
+#services img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 32px rgba(17,110,104,0.18);
 }
